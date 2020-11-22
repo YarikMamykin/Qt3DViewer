@@ -2,13 +2,21 @@
 #define INCLUDE_UI_BUTTONS_CLOSEBUTTON_H
 
 #include <QPushButton>
+#include <QEvent>
 
 namespace ui {
   namespace buttons {
     class CloseButton : public QPushButton {
       public:
-        explicit CloseButton (const QString& name = "Close");
+        explicit CloseButton ();
         ~CloseButton() = default;
+
+      protected:
+          virtual void enterEvent( QEvent* e ) override;
+          virtual void leaveEvent( QEvent* e ) override;
+
+      private:
+        void setFocus(bool focus);
     };
   }
 }

@@ -9,6 +9,13 @@ namespace ui {
       public:
         explicit RemoveModelButton(const QString& name = "Remove");
         ~RemoveModelButton() = default;
+
+      protected:
+          virtual void enterEvent( QEvent* e ) override;
+          virtual void leaveEvent( QEvent* e ) override;
+
+      private:
+        void setFocus(bool focus);
     };
   }
 }

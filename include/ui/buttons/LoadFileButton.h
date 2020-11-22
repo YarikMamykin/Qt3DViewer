@@ -9,6 +9,13 @@ namespace ui {
       public:
         explicit LoadFileButton(const QString& name = "Load");
         ~LoadFileButton() = default;
+
+      protected:
+          virtual void enterEvent( QEvent* e ) override;
+          virtual void leaveEvent( QEvent* e ) override;
+
+      private:
+        void setFocus(bool focus);
     };
   }
 }
