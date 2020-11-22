@@ -24,7 +24,8 @@ set(SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
             ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/buttons/RemoveModelButton.cpp
             ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/labels/LoadFileLabel.cpp
             ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/labels/SelectedFileLabel.cpp
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/windows/MainWindow.cpp
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/labels/HeaderLabel.cpp
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/labels/CurrentFileLabel.cpp
             ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/layouts/ControlElementsLayout.cpp
             ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/layouts/WindowLayout.cpp
             ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/layouts/HeaderLayout.cpp
@@ -40,3 +41,4 @@ target_link_libraries(${PROJECT_NAME} Qt5::3DCore Qt5::3DExtras Qt5::3DRender Qt
 
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/additional/mesh.stl ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/additional/close_icon.jpg ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
