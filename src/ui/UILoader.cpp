@@ -33,8 +33,10 @@ namespace ui {
   void UILoader::setUIConnections(layouts::WindowLayout* windowLayout) {
     auto removeModelButton = windowLayout->getControlElementsLayout()->getRemoveModelButton();
     auto loadFileButton = windowLayout->getControlElementsLayout()->getLoadFileButton();
+    auto selectedFileLabel = windowLayout->getControlElementsLayout()->getSelectedFileLabel();
 
     QObject::connect(removeModelButton, &QPushButton::pressed, windowLayout, &layouts::WindowLayout::resetModelView);
+    QObject::connect(removeModelButton, &QPushButton::pressed, selectedFileLabel, &QLabel::clear);
     QObject::connect(loadFileButton, &QPushButton::pressed, windowLayout, &layouts::WindowLayout::resetAndLoadModelView);
   }
 }
