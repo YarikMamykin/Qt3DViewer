@@ -2,6 +2,7 @@
 #define INCLUDE_UI_UILOADER_H
 
 #include "ui/layouts/WindowLayout.h"
+#include "ui/layouts/HeaderLayout.h"
 #include <Qt3DExtras/Qt3DWindow>
 #include <QWidget>
 
@@ -14,7 +15,7 @@ namespace ui {
   class UILoader {
     std::unique_ptr<QWidget> window;
     
-    void setUIConnections(layouts::WindowLayout* windowLayout);
+    void setUIConnections(layouts::WindowLayout* windowLayout, layouts::HeaderLayout* headerLayout);
 
     public:
     UILoader();
