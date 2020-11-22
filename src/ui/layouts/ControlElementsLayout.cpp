@@ -7,6 +7,7 @@ namespace ui {
       : QVBoxLayout() 
       , loadScansLabel(new labels::LoadFileLabel)
       , selectedFileLabel(new labels::SelectedFileLabel)
+      , currentFileLabel(new labels::CurrentFileLabel)
       , loadFileButton(new buttons::LoadFileButton)
       , removeModelButton(new buttons::RemoveModelButton) {
 
@@ -16,6 +17,7 @@ namespace ui {
 
           this->addWidget(loadScansLabel);
           this->addLayout(buttonsLayout);
+          this->addWidget(currentFileLabel);
           this->addWidget(selectedFileLabel);
 
           this->setSpacing(10);

@@ -3,6 +3,7 @@
 
 #include <QVBoxLayout>
 #include <ui/labels/LoadFileLabel.h>
+#include <ui/labels/CurrentFileLabel.h>
 #include <ui/labels/SelectedFileLabel.h>
 #include <ui/buttons/LoadFileButton.h>
 #include <ui/buttons/RemoveModelButton.h>
@@ -14,12 +15,13 @@ namespace ui {
       private:
         labels::LoadFileLabel *loadScansLabel;
         labels::SelectedFileLabel *selectedFileLabel;
+        labels::CurrentFileLabel *currentFileLabel;
         buttons::LoadFileButton *loadFileButton;
         buttons::RemoveModelButton *removeModelButton;
 
       public:
         explicit ControlElementsLayout();
-        ~ControlElementsLayout()  = default;
+        ~ControlElementsLayout() = default;
         
         buttons::RemoveModelButton* getRemoveModelButton() const;
         labels::SelectedFileLabel* getSelectedFileLabel() const;
