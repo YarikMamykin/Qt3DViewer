@@ -27,6 +27,7 @@ set(SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
             ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/windows/MainWindow.cpp
             ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/layouts/ControlElementsLayout.cpp
             ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/layouts/WindowLayout.cpp
+            ${CMAKE_CURRENT_SOURCE_DIR}/src/ui/layouts/HeaderLayout.cpp
 )
 
 
