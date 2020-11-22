@@ -7,7 +7,7 @@ namespace ui {
   namespace labels {
     class LoadFileLabel : public QLabel {
       public:
-        LoadFileLabel(const QString& name = "Load scans");
+        LoadFileLabel(const QString& name = "Load 3D file (*.stl)");
         ~LoadFileLabel() = default;
     };
   }
