@@ -5,7 +5,7 @@ namespace ui {
   namespace buttons {
     CloseButton::CloseButton()
       : QPushButton() { 
-        auto icon = QIcon("./close_icon.jpg");
+        auto icon = QIcon("close_icon.jpg");
         auto iconSize = QSize(65, 65);
         this->setIcon(icon);
         this->setIconSize(iconSize);
