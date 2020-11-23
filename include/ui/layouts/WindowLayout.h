@@ -18,8 +18,6 @@ namespace ui {
         ~WindowLayout() = default;
         ControlElementsLayout* getControlElementsLayout() const;
         view::ModelView* getModelView() const;
-        void resetModelView();
-        void resetAndLoadModelView();
     };
   }
 }

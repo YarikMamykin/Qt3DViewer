@@ -18,19 +18,5 @@ namespace ui {
     view::ModelView* WindowLayout::getModelView() const {
       return modelView;
     }
-
-    void WindowLayout::resetModelView() {
-      this->removeWidget(this->modelView->asWidget());
-      delete this->modelView;
-      this->modelView = new view::ModelView;
-      this->addWidget(this->modelView->asWidget());
-    }
-
-    void WindowLayout::resetAndLoadModelView() {
-      resetModelView();
-      auto selectedFileLabel = this->getControlElementsLayout()->getSelectedFileLabel();
-      QObject::connect(this->modelView, &view::ModelView::displayMeshFilePath, selectedFileLabel, &QLabel::setText);
-      this->modelView->loadMeshFromFile();
-    }
   }
 }
