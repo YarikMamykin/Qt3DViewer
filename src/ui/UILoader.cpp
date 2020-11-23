@@ -17,7 +17,7 @@ namespace ui {
 
     window->setLayout(layout);
     window->setStyleSheet("background-color:black;");
-    window->show();
+    window->showMaximized();
   }
 
 
