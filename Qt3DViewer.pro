@@ -30,6 +30,10 @@ HEADERS += ./include/ui/buttons/CloseButton.h
 QT += core widgets
 QT += 3dcore 3dextras 3drender 3dinput
 
-install_it.path = $$OUT_PWD/debug
-install_it.files += ./additional/close_icon.jpg
-INSTALLS += install_it
+close_button_icon.path = $$OUT_PWD/debug
+close_button_icon.files += ./additional/close_icon.jpg
+INSTALLS += close_button_icon
+
+mesh_example.path = $$OUT_PWD/debug
+mesh_example.files += ./additional/mesh.stl
+INSTALLS += mesh_example
