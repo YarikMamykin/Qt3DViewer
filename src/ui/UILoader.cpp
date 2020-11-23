@@ -5,10 +5,7 @@
 
 namespace ui {
   UILoader::UILoader()
-  : window(new QWidget) { }
-
-  void UILoader::load() {
-
+  : window(new QWidget) { 
     auto windowLayout = new layouts::WindowLayout;
     auto headerLayout = new layouts::HeaderLayout;
 
@@ -23,15 +20,18 @@ namespace ui {
     window->show();
   }
 
+
   void UILoader::setUIConnections(layouts::WindowLayout* windowLayout, layouts::HeaderLayout* headerLayout) {
     auto removeModelButton = windowLayout->getControlElementsLayout()->getRemoveModelButton();
     auto loadFileButton = windowLayout->getControlElementsLayout()->getLoadFileButton();
     auto selectedFileLabel = windowLayout->getControlElementsLayout()->getSelectedFileLabel();
     auto closeButton = headerLayout->getCloseButton();
+    auto modelView = windowLayout->getModelView();
 
-    QObject::connect(removeModelButton, &QPushButton::pressed, windowLayout, &layouts::WindowLayout::resetModelView);
+    QObject::connect(removeModelButton, &QPushButton::pressed, modelView, &view::ModelView::resetMesh);
     QObject::connect(removeModelButton, &QPushButton::pressed, selectedFileLabel, &QLabel::clear);
-    QObject::connect(loadFileButton, &QPushButton::pressed, windowLayout, &layouts::WindowLayout::resetAndLoadModelView);
+    QObject::connect(loadFileButton, &QPushButton::pressed, modelView, &view::ModelView::loadMeshFromFile);
     QObject::connect(closeButton, &QPushButton::pressed, window.get(), &QWidget::close);
+    QObject::connect(modelView, &view::ModelView::displayMeshFilePath, selectedFileLabel, &QLabel::setText);
   }
 }

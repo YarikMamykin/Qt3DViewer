@@ -18,8 +18,7 @@ namespace ui {
     void setUIConnections(layouts::WindowLayout* windowLayout, layouts::HeaderLayout* headerLayout);
 
     public:
-    UILoader();
-    void load();
+    explicit UILoader();
   };
 }
 
