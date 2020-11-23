@@ -57,7 +57,7 @@ namespace ui {
           this->model->addComponent(this->mesh);
 
           QFileInfo fileInfo(meshFilePath);
-          emit displayMeshFilePath(fileInfo.fileName());
+          emit meshFileSelected(fileInfo.fileName());
         }
     }
     

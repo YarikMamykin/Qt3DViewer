@@ -33,7 +33,7 @@ namespace ui {
       void resetMesh(); 
 
 signals:
-      void displayMeshFilePath(const QString&);
+      void meshFileSelected(const QString&);
     };
   }
 }

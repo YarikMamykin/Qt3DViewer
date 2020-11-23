@@ -32,6 +32,6 @@ namespace ui {
     QObject::connect(removeModelButton, &QPushButton::pressed, selectedFileLabel, &QLabel::clear);
     QObject::connect(loadFileButton, &QPushButton::pressed, modelView, &view::ModelView::loadMeshFromFile);
     QObject::connect(closeButton, &QPushButton::pressed, window.get(), &QWidget::close);
-    QObject::connect(modelView, &view::ModelView::displayMeshFilePath, selectedFileLabel, &QLabel::setText);
+    QObject::connect(modelView, &view::ModelView::meshFileSelected, selectedFileLabel, &QLabel::setText);
   }
 }
